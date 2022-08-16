@@ -310,7 +310,7 @@ func (handler *Driver) Source(
 	if err != nil {
 		return "", err
 	}
-
+	finalURL.RawQuery = ""
 	// 公有空间替换掉Key及不支持的头
 	if !handler.Policy.IsPrivate {
 		finalURL.RawQuery = ""
